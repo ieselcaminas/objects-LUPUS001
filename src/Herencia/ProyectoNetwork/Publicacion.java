@@ -1,37 +1,47 @@
 package Herencia.ProyectoNetwork;
 
+import java.util.Date;
+
+
 public class Publicacion {
-    private String ID;
-    private int numLikes;
-    private String marca;
+    private Usuario usuario;
+    private Date fecha;
+    private int likes;
 
-    public Publicacion(String ID, int numLikes, String marca) {
-        this.ID = ID;
-        this.numLikes = numLikes;
-        this.marca = marca;
+    public Publicacion(Usuario usuario) {
+        this.usuario = usuario;
+        this.fecha = new Date();
+        this.likes = 0;
     }
 
-    public String getID() {
-        return ID;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    //Nunca vamos a cambiar el usuario
+    /*public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }*/
+
+    public Date getFecha() {
+        return fecha;
     }
 
-    public int getNumLikes() {
-        return numLikes;
+    //Ya que nos piden que la fecha sea del instante de la publicación, tampoco vamos a cambiar la fecha
+    /*public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }*/
+
+    public int getLikes() {
+        return likes;
     }
 
-    public void setNumLikes(int numLikes) {
-        this.numLikes = numLikes;
+    //Este metodo SETTER vamos a utilizarlo para aumentar la cantidad de likes (por eso la sintaxis es diferente a la de un setter comvencional)
+    public void like() {
+        this.likes++;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void disLike(){
+        this.likes--;
     }
 }

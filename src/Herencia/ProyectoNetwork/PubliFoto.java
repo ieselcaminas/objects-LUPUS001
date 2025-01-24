@@ -1,34 +1,37 @@
 package Herencia.ProyectoNetwork;
-
 import java.util.List;
 
 public class PubliFoto extends Publicacion{
-    private String nomUsu;
-    private String mensaje;
+    private String titulo;
+    private String archivo;
 
-    public PubliFoto(String ID, int numLikes, String marca, String nomUsu, String mensaje) {
-        super(ID, numLikes, marca);
-        this.nomUsu = nomUsu;
-        this.mensaje = mensaje;
+    public PubliFoto(Usuario usuario, String titulo, String archivo) {
+        super(usuario);
+        this.titulo = titulo;
+        this.archivo = archivo;
     }
 
-
-    //private List<String, String> comentarios;
-
-    public String getNomUsu() {
-        return nomUsu;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setNomUsu(String nomUsu) {
-        this.nomUsu = nomUsu;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    public String getArchivo() {
+        return archivo;
     }
 
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
+    public void setArchivo(String archivo) {
+        this.archivo = archivo;
+    }
+
+    @Override
+    public String toString(){
+        return this.getFecha() + " Usuario: " +  this.getUsuario() +
+                "\n - Título: " +this.titulo + "\n - Archivo: " + this.archivo +
+                "\n - Likes: " + this.getLikes();
     }
 }
 

@@ -1,4 +1,4 @@
-package EjerciciosPOO.Ejercicio3;
+package ejerciciosPOO.ejercicio3;
 
 public class Cuenta {
     private String nombre;

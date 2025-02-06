@@ -2,10 +2,12 @@ package ejerciciosPOO.bancoEj5;
 
 public class Prestec {
     private int numPrestamo;
+    private int cantidad;
     private Cliente cliente;
 
-    public Prestec(int numPrestamo, Cliente cliente) {
+    public Prestec(int numPrestamo, int cantidad, Cliente cliente) {
         this.numPrestamo = numPrestamo;
+        this.cantidad = cantidad;
         this.cliente = cliente;
     }
 
@@ -15,6 +17,14 @@ public class Prestec {
 
     public void setNumPrestamo(int numPrestamo) {
         this.numPrestamo = numPrestamo;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public Cliente getCliente() {
@@ -27,6 +37,6 @@ public class Prestec {
 
     @Override
     public String toString(){
-        return "" + this.numPrestamo;
+        return "" + this.numPrestamo + this.cantidad;
     }
 }

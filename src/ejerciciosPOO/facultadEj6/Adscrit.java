@@ -42,5 +42,4 @@ public class Adscrit {
     public String toString(){
         return this.data;
     }
-
 }

@@ -6,11 +6,13 @@ import java.util.List;
 public class Departament {
     private int cod_dep;
     private String nombreDep;
+    private AreaConeixement areaConeixement;
     private List<Professor> professors;
 
-    public Departament(int cod_dep, String nombreDep) {
+    public Departament(int cod_dep, String nombreDep, AreaConeixement areaConeixement) {
         this.cod_dep = cod_dep;
         this.nombreDep = nombreDep;
+        this.areaConeixement = areaConeixement;
         this.professors = new ArrayList<>();
     }
 
@@ -28,6 +30,14 @@ public class Departament {
 
     public void setNombreDep(String nombreDep) {
         this.nombreDep = nombreDep;
+    }
+
+    public AreaConeixement getAreaConeixement() {
+        return areaConeixement;
+    }
+
+    public void setAreaConeixement(AreaConeixement areaConeixement) {
+        this.areaConeixement = areaConeixement;
     }
 
     public List<Professor> getProfessors(){

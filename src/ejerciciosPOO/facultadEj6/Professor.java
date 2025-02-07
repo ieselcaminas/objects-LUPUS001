@@ -7,30 +7,44 @@ public class Professor {
     private int cod_prof;
     private String nombre;
     private List<Catedra> catedras;
+    private Departament departament;
 
-    public Professor(int cod_prof, String nombre) {
+    public Professor(int cod_prof, String nombre, Departament departament) {
         this.cod_prof = cod_prof;
         this.nombre = nombre;
+        this.departament = departament;
         this.catedras = new ArrayList<>();
     }
 
-    private int getCod_prof(){
+    public int getCod_prof(){
         return cod_prof;
     }
 
-    private void setCod_prof(int cod_prof){
+    public void setCod_prof(int cod_prof){
         this.cod_prof = cod_prof;
     }
 
-    private String getNombre(){
+    public String getNombre(){
         return nombre;
     }
 
-    private void setNombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    private List<Catedra> getCatedras(){
+    public void setCatedras(List<Catedra> catedras) {
+        this.catedras = catedras;
+    }
+
+    public Departament getDepartament() {
+        return departament;
+    }
+
+    public void setDepartament(Departament departament) {
+        this.departament = departament;
+    }
+
+    public List<Catedra> getCatedras(){
         return catedras;
     }
 

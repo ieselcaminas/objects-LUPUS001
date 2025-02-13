@@ -6,9 +6,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Pujador> pujadores = new ArrayList<>();
-        Pujador ermenegildo = new Pujador("Ermenegildo Gómez");
+        Pujador ermenegildo = new Pujador("Ermenegildo Gómez", 1);
             pujadores.add(ermenegildo);
-        Pujador ramon = new Pujador("Ramón Cana");
+        Pujador ramon = new Pujador("Ramón Cana", 2);
             pujadores.add(ramon);
 
         List<Lote> lotes = new ArrayList<>();

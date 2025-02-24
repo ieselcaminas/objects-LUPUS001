@@ -32,5 +32,18 @@ public class Main {
                         ramon.addPuja(puja2);
                         lote2.addPuja(puja2);
 
+        for (Subasta subasta:casaSubastas){
+            System.out.println(subasta.getNombre());
+            for (Lote lote : subasta.getLotes()){
+                System.out.println("\t" +lote.getNombre());
+                for (Articulo articulo: lote.getArticulos()){
+                    System.out.println("\t\t" +articulo.getNombre());
+                    System.out.println("\t\t" +articulo.getPrecio());
+                }
+                for (Puja pujaLote: lote.getPujas()){
+                    System.out.println("\t\t" +pujaLote.getPujador().getNombre());
+                }
+            }
+        }
     }
 }

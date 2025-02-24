@@ -1,12 +1,15 @@
 package Herencia.ProyectoNetwork;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
-public class Publicacion {
+public abstract class Publicacion {
     private Usuario usuario;
     private Date fecha;
     private int likes;
+    private List<Comentario> comentarios = new ArrayList<>();
 
     public Publicacion(Usuario usuario) {
         this.usuario = usuario;
@@ -43,5 +46,13 @@ public class Publicacion {
 
     public void disLike(){
         this.likes--;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void addComentario(Comentario comentario){
+        this.comentarios.add(comentario);
     }
 }

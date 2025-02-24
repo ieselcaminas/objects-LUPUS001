@@ -29,7 +29,7 @@ public class PubliFoto extends Publicacion{
 
     @Override
     public String toString(){
-        return this.getFecha() + " Usuario: " +  this.getUsuario() +
+        return this.getFecha() + " Usuario: " +  this.getUsuario().getNombreReal() +
                 "\n - Título: " +this.titulo + "\n - Archivo: " + this.archivo +
                 "\n - Likes: " + this.getLikes();
     }

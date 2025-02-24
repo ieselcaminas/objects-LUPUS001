@@ -5,22 +5,25 @@ import java.util.List;
 
 public class Lote {
     private int numLote;
+    private String nombre;
     private double precioSalida;
-    private Pujador pujador;
+    private Subasta subasta;
     private List<Articulo> articulos = new ArrayList<>();
+    private List<Puja> pujas = new ArrayList<>();
 
-    public Lote(int numLote, double precioSalida, Pujador pujador) {
+    public Lote(int numLote, String nombre, double precioSalida, Subasta subasta) {
         this.numLote = numLote;
+        this.nombre = nombre;
         this.precioSalida = precioSalida;
-        this.pujador = pujador;
+        this.subasta = subasta;
     }
 
     public int getNumLote() {
         return numLote;
     }
 
-    public void setNumLote(int numLote) {
-        this.numLote = numLote;
+    public String getNombre() {
+        return nombre;
     }
 
     public double getPrecioSalida() {
@@ -31,12 +34,20 @@ public class Lote {
         this.precioSalida = precioSalida;
     }*/
 
-    public Pujador getPujador() {
-        return pujador;
+    public Subasta getSubasta() {
+        return subasta;
     }
 
-    public void setPujador(Pujador pujador) {
-        this.pujador = pujador;
+    public void setSubasta(Subasta subasta) {
+        this.subasta = subasta;
+    }
+
+    public List<Puja> getPujas() {
+        return pujas;
+    }
+
+    public void addPuja(Puja puja){
+        this.pujas.add(puja);
     }
 
     public List<Articulo> getArticulos() {
@@ -49,6 +60,6 @@ public class Lote {
 
     @Override
     public String toString(){
-        return this.numLote + " - " + this.precioSalida;
+        return this.numLote + " - " + this.nombre + this.precioSalida;
     }
 }

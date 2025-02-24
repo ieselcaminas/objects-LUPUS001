@@ -6,7 +6,6 @@ import java.util.List;
 public class Pujador {
     private String nombre;
     private int cod_puj;
-    List<Lote> lotes = new ArrayList<>();
     List<Puja> pujas = new ArrayList<>();
 
     public Pujador(String nombre, int cod_puj) {
@@ -30,12 +29,12 @@ public class Pujador {
         this.cod_puj = cod_puj;
     }
 
-    public List<Lote> getLotes() {
-        return lotes;
+    public List<Puja> getPujas() {
+        return pujas;
     }
 
-    public void addLote(Lote lote){
-        this.lotes.add(lote);
+    public void addPuja(Puja puja){
+        this.pujas.add(puja);
     }
 
     @Override

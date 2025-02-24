@@ -2,11 +2,11 @@ package ejerciciosPOO.subastas;
 
 public class Puja {
     private int cod_puj;
-    private int cuantia;
+    private double cuantia;
     private Pujador pujador;
     private Lote lote;
 
-    public Puja(int cod_puj, int cuantia, Pujador pujador, Lote lote) {
+    public Puja(int cod_puj, double cuantia, Pujador pujador, Lote lote) {
         this.cod_puj = cod_puj;
         this.cuantia = cuantia;
         this.pujador = pujador;
@@ -21,23 +21,26 @@ public class Puja {
         this.cod_puj = cod_puj;
     }
 
-    public int getCuantia() {
+    public double getCuantia() {
         return cuantia;
     }
 
-    public void setCuantia(int cuantia) {
+    public void setCuantia(double cuantia) {
         this.cuantia = cuantia;
     }
 
     public Lote getLote() {
         return lote;
     }
+
     public void setLote(Lote lote) {
         this.lote = lote;
     }
+
     public Pujador getPujador() {
         return pujador;
     }
+
     public void setPujador(Pujador pujador) {
         this.pujador = pujador;
     }

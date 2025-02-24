@@ -19,7 +19,7 @@ public class Main {
         l.addTemas(t2);
 
         for (Libro libro : libros){
-            System.out.println(libro.getTitulo() + " - " +          libro.getAutor());
+            System.out.println(libro.getTitulo() + " - " + libro.getAutor());
             for (Tema temas : libro.getTemas()){
                 System.out.println("\t" + temas.getNombre());
             }

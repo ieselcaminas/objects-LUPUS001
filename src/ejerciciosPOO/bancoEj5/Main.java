@@ -24,5 +24,11 @@ public class Main {
                 Cliente victor = new Cliente("Victor", "251223C");
                 Cliente cliS1 = new Cliente("Eustaquio", "171623Q");
 
+        for(Banc banc: bancos){
+            System.out.println(banc);
+            for(Sucursal suc: banc.getSucursales()){
+                System.out.println("\t" + suc);
+            }
+        }
     }
 }

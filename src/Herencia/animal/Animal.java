@@ -38,18 +38,12 @@ public abstract class Animal
      * El método respirar es común para el gato y el perro
      * 
      */
-    /*public void respirar()
-    {
-        System.out.println("Respiro aire por los pulmones");
-    }*/
+    public abstract void respirar();
     /**
      * El método moverse es común para el gato y el perro
      * 
      */
-    public void moverse()
-    {
-        System.out.println("Me muevo a 4 patas");
-    }
+    public abstract void moverse();
     /**
      * El método mamar es común para el gato y el perro
      * 
@@ -65,8 +59,8 @@ public abstract class Animal
      * @returns  La representación como cadena de un objeto animal
      *
      */
-    public String toString()
-    {
+    @Override
+    public String toString() {
         return "Animal: " + nombre;
     }
 }

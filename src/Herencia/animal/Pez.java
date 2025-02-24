@@ -5,7 +5,13 @@ public abstract class Pez extends Animal {
         super(nombre);
     }
 
+    @Override
     public void respirar(){
         System.out.println("Respiro con branquias gluglu");
+    }
+
+    @Override
+    public void moverse(){
+        System.out.println("Me muevo nadando");
     }
 }

@@ -24,5 +24,12 @@ public class Main {
         PezPayaso pezClown = new PezPayaso("Marlin");
         pezClown.comunicarse();
         pezClown.buscarANemo();
+
+        Entrenador julio = new Entrenador("Julio");
+        julio.entrenar(tiburon);
+        julio.entrenar(gato);
+
+        julio.dejarEntrar(tiburon);
+        julio.dejarEntrar(pezClown);
     }
 }
